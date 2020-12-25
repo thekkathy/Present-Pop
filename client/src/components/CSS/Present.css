@@ -26,6 +26,10 @@ body {
     cursor: initial;
 }
 
+#Rudolph {
+    margin: 100px 100px 100px 100px;
+}
+
  .content {
     margin-top: 25px;
 } 
