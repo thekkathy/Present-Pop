@@ -26,9 +26,7 @@
 
 #goBack {
     margin-top: 20px;
-    padding: 0px;
     overflow: hidden;
-    list-style-type: none;
     width: 25%;
     background-color:#A31621;
     line-height: 1.2em;
@@ -41,8 +39,29 @@
     border-radius: 10px;
 }
 
-#goBack:hover {
-    opacity: 0.7;
+#goBack span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+#goBack span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+#goBack:hover span {
+    padding-right: 25px;
+}
+  
+#goBack:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 /* div #star{
