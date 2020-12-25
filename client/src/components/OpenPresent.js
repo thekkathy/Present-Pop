@@ -1,12 +1,12 @@
 import React from 'react';
-//import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Gift from "../images/gift.png"
 import './CSS/OpenPresent.css'
 
-class OpenPresent extends React.Component{
-    render(){
-        return(
+class OpenPresent extends React.Component {
+    render() {
+        return (
             <div>
                 <h1 className="title">
                     Present Opener
@@ -16,8 +16,10 @@ class OpenPresent extends React.Component{
                     A drop of surprise 🙃
                 </h2>
 
-                <img src={Gift} alt="Gift box"></img>
-                
+                <Link to="/load">
+                    <img src={Gift} alt="Gift box"></img>
+                </Link>
+
                 <h4 className="content">
                     Click on the gift box to open your present
                 </h4>
