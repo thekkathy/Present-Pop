@@ -2,6 +2,7 @@ import React from 'react';
 //import {Link} from 'react-router-dom';
 
 import Gift from "../images/gift.png"
+import './CSS/OpenPresent.css'
 
 class OpenPresent extends React.Component{
     render(){
