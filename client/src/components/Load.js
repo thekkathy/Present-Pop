@@ -1,37 +1,41 @@
 import React from 'react';
-import history from '../history';
+// import history from '../history';
+import { Redirect } from 'react-router-dom';
 import './CSS/Load.css';
 
 class Load extends React.Component {
     state = { redirect: false };
 
-    componentDidMount(){
+    componentDidMount() {
         //when load page first loads up, wait on loading for 1.5 seconds
         //then change redirect to true
-        this.timeout = setTimeout(() => {
-            this.setState({
-                redirect: true
-            })
-        }, 1500);
+        this.timeout = setTimeout(() =>
+            this.setState(
+                { redirect: true }),
+            1000
+        );
     }
 
-    componentWillUnmount(){
-        clearTimeout.apply(this.timeout);
+    //clear timer when done
+    componentWillUnmount() {
+        clearTimeout(this.timeout);
     }
-    
+
+    getRandomInt(max){
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    selectPresent(){
+        console.log(this.getRandomInt(10));
+    }
 
     render() {
-        const {redirect} = this.state;
-        //if redirect is true, then redirect user to present
-        if(redirect){
-            history.push("/present");
-        }
-
         return (
-            <div className="load">
-                Opening present...
-            </div>
-        );
+            this.state.redirect
+                ? <Redirect to="/present" />
+                : <div className="load"> Opening present... </div>
+            )
+
     }
 }
 
