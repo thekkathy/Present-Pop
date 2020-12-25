@@ -16,7 +16,8 @@ import './CSS/Present.css';
 //set up howl object
 const sound = new Howl({
     src: RudolphSong,
-    loop: true});
+    loop: true
+});
 
 class Present extends React.Component {
     state = { id: 'noStar', image: '', title: '', message: '', href: '', play: false };
@@ -25,7 +26,7 @@ class Present extends React.Component {
     componentDidMount = () => {
         //sound.addEventListener('ended', () => this.setState({play: false}));
         sound.on('end', () => {
-            this.setState({play: false});
+            this.setState({ play: false });
         });
 
         //when the page loads, determine which present the user gets
@@ -79,12 +80,12 @@ class Present extends React.Component {
         }
     }
 
-    componentWillUnmount(){
-        if(this.state.play){
+    componentWillUnmount() {
+        if (this.state.play) {
             sound.pause();
         }
         sound.off('end', () => {
-            this.setState({play: false});
+            this.setState({ play: false });
         });
         sound.seek(0);
     }
@@ -93,20 +94,29 @@ class Present extends React.Component {
     togglePlay = () => {
         this.setState({ play: !this.state.play }, () => {
             this.state.play ? sound.play() : sound.pause();
-          });
+        });
     }
 
     renderImage() {
         if (this.state.title === "Rudolph") {
             return (
-                <button id={this.state.id} onClick={this.togglePlay}/>
+                <button id={this.state.id} onClick={this.togglePlay} />
+            );
+        }
+        else if (this.state.id === "star" || this.state.id === "socks") {
+            return (
+                <div id={this.state.id}>
+                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
+                </div>
             );
         }
         else {
             return (
-                <a id={this.state.id} href={this.state.href}>
+                <td
+                    onClick={() => window.open(this.state.href, "_blank")}
+                    id={this.state.id} >
                     <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
-                </a>
+                </td>
             );
         }
     }
