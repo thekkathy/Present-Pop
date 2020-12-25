@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Coal from '../images/coal.png';
 import Socks from '../images/regifted_socks.png';
@@ -77,7 +78,7 @@ class Present extends React.Component {
 
                 <div className="content">{this.state.message}</div>
 
-
+                <Link to="/" id="goBack">🎁 Open another present 🎁</Link>
 
             </div>
         );
