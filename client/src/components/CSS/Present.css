@@ -1,26 +1,47 @@
-.present{
+/* .present{
     margin:0;
     padding:0;
     height: 100%;
     overflow: hidden;
     background-color: black;
-}
+} */
 .presentImage {
     max-width: 300px;
     max-height: 300px;
     display: inline-block;
 }
 
-.presentImage #nostar:hover {
+#noStar:hover {
     opacity: 0.7;
 }
 
-.presentImage #star:hover {
+#star:hover {
     cursor: initial;
 }
 
 .content {
     margin-top: 20px;
+}
+
+#goBack {
+    margin-top: 20px;
+    padding: 0px;
+    overflow: hidden;
+    list-style-type: none;
+    width: 25%;
+    background-color:#A31621;
+    line-height: 1.6em;
+    font-size: 20px;
+    display: inline-block;
+    color:#FCF7F8;
+    padding: 15px 17px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#goBack:hover {
+    opacity: 0.7;
 }
 
 /* div #star{
