@@ -10,7 +10,7 @@ class OpenPresent extends React.Component {
         return (
             <div className="openPresent">
                 <h1 className="title">
-                    Present Opener
+                    Present Pop
                 </h1>
 
                 <h2 className="subtitle">
