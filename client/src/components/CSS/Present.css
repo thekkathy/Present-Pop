@@ -11,8 +11,19 @@ body {
 .presentImage {
     max-width: 250px;
     max-height: 250px;
-    display: inline-block;
-    /*border: 5px solid snow;*/
+    margin-top: 0;
+    /* display: inline-block;
+    /*border: 5px solid snow;
+    margin-bottom: 25px;
+    margin-top: 25px; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+#noStar.presentImage {
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -26,6 +37,11 @@ body {
     cursor: initial;
 }
 
+ /* #noStar {
+    margin-left: auto;
+    margin-right: auto;
+}  */
+
 #rudolph {
     margin: 100px 100px 100px 100px;
     /* background-image: url(../images/rudolph.png);
@@ -34,7 +50,11 @@ body {
     height: 20px; */
 }
 
- .content {
+#noStar .present .title {
+    margin-top: 275px;
+}
+
+.content {
     margin-top: 25px;
 } 
 
