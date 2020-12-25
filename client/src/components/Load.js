@@ -39,7 +39,7 @@ class Load extends React.Component {
                 ? <Redirect to="/present" />
                 :
                 <div className="load">
-                    <img id="loadImg" src={Gift} alt="gift pic" />
+                    <img id="loadImg" src={Gift} alt="gift pic" /> <br></br>
                         Opening present...
                     </div>
 
