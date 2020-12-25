@@ -21,7 +21,7 @@ class Present extends React.Component {
                 image: Star, 
                 title: "The Star", 
                 message: "Congratulations! There is only a 2% chance of getting this, you will be blessed with much luck and good fortune next year.",
-                href: "#"
+                href: ""
             });
         }
         // good tier
@@ -48,7 +48,7 @@ class Present extends React.Component {
                 image: Socks, 
                 title: "Regifted Socks", 
                 message: "They didn't even try to hide it...",
-                href: "#"
+                href: ""
             });
         }
         // bottom tier
