@@ -5,6 +5,7 @@ import Gift from "../images/gift.png"
 import './CSS/OpenPresent.css'
 
 class OpenPresent extends React.Component {
+    
     render() {
         return (
             <div>

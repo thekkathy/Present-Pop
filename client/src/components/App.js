@@ -8,15 +8,6 @@ import Load from './Load';
 import Present from './Present';
 
 class App extends React.Component {
-    state = { redirect: false, id: '' };
-
-    //randomly selects which present to display to the user
-    selectPresent() {
-        //selects a number between 0 - 99 inclusive
-        const maxNum = 100;
-        const selectedId = Math.floor(Math.random() * Math.floor(maxNum));
-        this.setState({ id: selectedId });
-    }
 
     render() {
         return (
