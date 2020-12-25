@@ -24,6 +24,9 @@ class Present extends React.Component {
 
     componentDidMount = () => {
         //sound.addEventListener('ended', () => this.setState({play: false}));
+        sound.on('end', () => {
+            this.setState({play: false});
+        });
 
         //when the page loads, determine which present the user gets
         const id = parseFloat(this.props.match.params.id);
@@ -80,9 +83,10 @@ class Present extends React.Component {
         if(this.state.play){
             sound.pause();
         }
-        sound.on('end', () => {
+        sound.off('end', () => {
             this.setState({play: false});
         });
+        sound.seek(0);
     }
 
 
