@@ -1,23 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Howl, Howler } from 'howler';
 
 import Coal from '../images/coal.png';
 import Socks from '../images/regifted_socks.png';
 import Rudolph from '../images/rudolph.png';
 import Charity from '../images/charity.png';
 import Star from '../images/star.png';
+import RudolphSong from '../rudolph.mp3';
 
 import './CSS/Present.css';
+
+//set up sound and label
+//const audio = {sound: RudolphSong, label: "Rudolph"};
+//set up howl object
+const sound = new Howl({
+    src: RudolphSong,
+    loop: true});
 
 class Present extends React.Component {
     state = { id: 'noStar', image: '', title: '', message: '', href: '', play: false };
 
-    audio = new Audio("https://www.youtube.com/watch?v=fJQqOzkcHjg&ab_channel=ChristmasSongsandCarols-LovetoSing");
 
-    //when the page loads, determine which present the user gets
     componentDidMount = () => {
-        this.audio.addEventListener('ended', () => this.setState({ play: false }));
+        //sound.addEventListener('ended', () => this.setState({play: false}));
 
+        //when the page loads, determine which present the user gets
         const id = parseFloat(this.props.match.params.id);
         // top tier
         if (id < 3) {
@@ -67,19 +75,28 @@ class Present extends React.Component {
         }
     }
 
-    togglePlay = () => {
-        this.setState({ play: !this.state.play }, () => {
-            this.state.play ? this.audio.play() : this.audio.pause();
+    componentWillUnmount(){
+        if(this.state.play){
+            sound.pause();
+        }
+        sound.on('end', () => {
+            this.setState({play: false});
         });
     }
+
+
+    togglePlay = () => {
+        this.setState({ play: !this.state.play }, () => {
+            this.state.play ? sound.play() : sound.pause();
+          });
+    }
+
+
 
     renderImage() {
         if (this.state.title === "Rudolph") {
             return (
-                <button onClick={this.togglePlay} id={this.state.id} href={this.state.href}>
-                    {this.state.play ? 'Pause' : 'Play'}
-                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
-                </button>
+                <button id={this.state.id} onClick={this.togglePlay}/>
             );
         }
         else {
@@ -92,6 +109,7 @@ class Present extends React.Component {
     }
 
     render() {
+        Howler.volume(1.0);
         return (
             <div className="present">
                 <div className="subtitle">
@@ -106,7 +124,7 @@ class Present extends React.Component {
 
                 <Link to="/" id="goBack">
                     <span>
-                        🎁 Open another present 🎁 
+                        🎁 Open another present 🎁
                 </span>
                 </Link>
 
