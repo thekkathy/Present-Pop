@@ -1,0 +1,30 @@
+body {
+    margin-top: 0;
+    padding: 0;
+    text-align: center;
+    background-color:rgb(255, 238, 145);
+    font-family: font-family: 'Amatic SC', cursive;
+}
+img {
+    max-width: 300px;
+    max-height: 300px;
+    display: inline-block;
+}
+
+ img:hover {
+    animation: up_down 500ms ease infinite;
+    position: relative;
+}
+@keyframes up_down {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    } 
+
+} 
+.title {
+    text-transform: uppercase;
+    font-size: 40px;
+}
