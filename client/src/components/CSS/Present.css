@@ -9,7 +9,7 @@
 }
 
 .presentImage #star:hover {
-    cursor: none;
+    cursor: initial;
 }
 
 .content {
