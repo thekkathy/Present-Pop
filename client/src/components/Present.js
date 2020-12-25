@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Coal from '../images/coal.png';
+
+import './CSS/Present.css';
 
 class Present extends React.Component {
     render() {
