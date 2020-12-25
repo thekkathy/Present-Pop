@@ -9,12 +9,12 @@ body{
     overflow: hidden;
     list-style-type: none;
     width: 100%;
-    background-color:rgb(196, 3, 3);
+    background-color:slateblue;
     line-height: 1.6em;
 }
 .navbar a {
     display: inline-block;
-    color: rgb(213, 252, 255);
+    color:white;
     padding: 15px 17px;
     text-decoration: none;
     text-align: left;
