@@ -1,16 +1,14 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Amatic SC', cursive;
+.load {
+    font-size: 30px;
 }
-img {
-    max-width: 300px;
-    max-height: 300px;
+/* #load {
+    max-width: 100px;
+    max-height: 100px;
     display: inline-block;
     animation: spin 1s ease infinite;
     position: relative;
-}
+} 
 @keyframes spin {
     0% {transform:rotate(0deg);}
     100% {transform:rotate(360deg);}
-} 
+} */

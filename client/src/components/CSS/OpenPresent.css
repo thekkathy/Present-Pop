@@ -1,17 +1,13 @@
-body {
-    margin-top: 0;
-    padding: 0;
-    text-align: center;
+div {
     background-color:white;
-    font-family: 'Amatic SC', cursive;
 }
-img {
+#gift {
     max-width: 300px;
     max-height: 300px;
     display: inline-block;
 }
 
- img:hover {
+#gift:hover {
     animation: up_down 500ms ease infinite;
     position: relative;
 }
@@ -26,4 +22,8 @@ img {
 .title {
     text-transform: uppercase;
     font-size: 40px;
+    line-height: 0.5em;
+}
+.subtitle {
+    font-size: 30px;
 }

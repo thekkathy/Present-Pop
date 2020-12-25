@@ -1,7 +1,8 @@
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 .navbar {
     margin: 0px;
@@ -11,6 +12,7 @@ body{
     width: 100%;
     background-color:slateblue;
     line-height: 1.6em;
+    font-size: 20px;
 }
 .navbar a {
     display: inline-block;
