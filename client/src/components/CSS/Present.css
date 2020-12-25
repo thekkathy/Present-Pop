@@ -1,3 +1,10 @@
+.present{
+    margin:0;
+    padding:0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
 .presentImage {
     max-width: 300px;
     max-height: 300px;
