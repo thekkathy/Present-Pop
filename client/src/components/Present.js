@@ -49,6 +49,7 @@ class Present extends React.Component {
         // ok tier
         else if (id >= 10 && id < 30) {
             this.setState({
+                id: "rudolph",
                 image: Rudolph,
                 title: "Rudolph",
                 message: "Rudolph the red nosed reindeer...(psst, click on the image to sing along)",
@@ -90,8 +91,6 @@ class Present extends React.Component {
             this.state.play ? sound.play() : sound.pause();
           });
     }
-
-
 
     renderImage() {
         if (this.state.title === "Rudolph") {
