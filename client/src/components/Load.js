@@ -8,22 +8,24 @@ class Load extends React.Component {
     componentDidMount(){
         //when load page first loads up, wait on loading for 1.5 seconds
         //then change redirect to true
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             this.setState({
                 redirect: true
             })
         }, 1500);
     }
-    
-    renderRedirect(){
-        //if redirect is true, then redirect user to present
-        if(this.state.redirect){
-            history.push("/present");
-        }
+
+    componentWillUnmount(){
+        clearTimeout.apply(this.timeout);
     }
+    
 
     render() {
-        this.renderRedirect();
+        const {redirect} = this.state;
+        //if redirect is true, then redirect user to present
+        if(redirect){
+            history.push("/present");
+        }
 
         return (
             <div className="load">
