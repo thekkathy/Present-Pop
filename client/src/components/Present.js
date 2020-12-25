@@ -49,7 +49,7 @@ class Present extends React.Component {
         // mid tier
         else if (id >= 30 && id < 60) {
             this.setState({
-                id: "socks", 
+                id: "socks",
                 image: Socks,
                 title: "Regifted Socks",
                 message: "They didn't even try to hide it...",
@@ -67,9 +67,27 @@ class Present extends React.Component {
         }
     }
 
-    renderImage(){
-        if(this.state.title === "Rudolph"){
-            console.log();
+    togglePlay = () => {
+        this.setState({ play: !this.state.play }, () => {
+            this.state.play ? this.audio.play() : this.audio.pause();
+        });
+    }
+
+    renderImage() {
+        if (this.state.title === "Rudolph") {
+            return (
+                <button onClick={this.togglePlay} id={this.state.id} href={this.state.href}>
+                    {this.state.play ? 'Pause' : 'Play'}
+                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
+                </button>
+            );
+        }
+        else {
+            return (
+                <a id={this.state.id} href={this.state.href}>
+                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
+                </a>
+            );
         }
     }
 
@@ -80,15 +98,17 @@ class Present extends React.Component {
                     You got...
                 </div>
 
-                <a id={this.state.id} href={this.state.href}>
-                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
-                </a>
+                {this.renderImage()}
 
                 <div className="title">{this.state.title}</div>
 
                 <div className="content">{this.state.message}</div>
 
-                <Link to="/" id="goBack">🎁 Open another present 🎁</Link>
+                <Link to="/" id="goBack">
+                    <span>
+                        🎁 Open another present 🎁 
+                </span>
+                </Link>
 
             </div>
         );
