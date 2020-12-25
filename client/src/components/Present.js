@@ -64,7 +64,7 @@ class Present extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="present">
                 <div className="subtitle">
                     You got...
                 </div>
@@ -76,6 +76,8 @@ class Present extends React.Component {
                 <div className="title">{this.state.title}</div>
 
                 <div className="content">{this.state.message}</div>
+
+
 
             </div>
         );

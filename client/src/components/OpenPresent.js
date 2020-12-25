@@ -8,7 +8,7 @@ class OpenPresent extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="openPresent">
                 <h1 className="title">
                     Present Opener
                 </h1>
