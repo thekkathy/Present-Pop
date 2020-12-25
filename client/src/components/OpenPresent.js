@@ -17,7 +17,7 @@ class OpenPresent extends React.Component {
                 </h2>
 
                 <Link to="/load">
-                    <img src={Gift} alt="Gift box"></img>
+                    <img id="gift" src={Gift} alt="Gift box"></img>
                 </Link>
 
                 <h4 className="content">
