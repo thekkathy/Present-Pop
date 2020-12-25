@@ -1,6 +1,7 @@
 body {
-    background-color:#FCF7F8;
-    color: #4E8098;
+    background-color:#032544;
+    color: white;
+    text-shadow:2px 2px 4px black;
 }
 #gift {
     max-width: 300px;
@@ -28,4 +29,5 @@ body {
 .subtitle {
     font-size: 30px;
     margin-top: 20px;
+    margin-bottom: 20 px;
 }

@@ -13,6 +13,7 @@ body{
     background-color:#A31621;
     line-height: 1.6em;
     font-size: 20px;
+    text-shadow: none;
 }
 .navbar a {
     display: inline-block;
@@ -20,9 +21,13 @@ body{
     padding: 15px 17px;
     text-decoration: none;
     text-align: left;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
 }
 .navbar a:hover {
     color:goldenrod;
+    /*border: 1px solid #888;*/
+    background-color: #ddd;
 }
 .button {
     background-color:rebeccapurple;

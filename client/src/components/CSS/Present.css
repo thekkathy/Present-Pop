@@ -5,10 +5,16 @@
     overflow: hidden;
     background-color: black;
 } */
+body {
+    background-color:#032544;
+}
 .presentImage {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     display: inline-block;
+    /*border: 5px solid snow;*/
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 #noStar:hover {
@@ -20,9 +26,9 @@
     cursor: initial;
 }
 
-.content {
-    margin-top: 20px;
-}
+ .content {
+    margin-top: 25px;
+} 
 
 #goBack {
     margin-top: 20px;
@@ -37,6 +43,7 @@
     text-decoration: none;
     text-align: center;
     border-radius: 10px;
+    text-shadow: none;
 }
 
 #goBack span {
@@ -48,6 +55,7 @@
   
 #goBack span:after {
     content: '\00bb';
+    text-size-adjust: auto;
     position: absolute;
     opacity: 0;
     top: 0;
