@@ -10,19 +10,19 @@ body{
     overflow: hidden;
     list-style-type: none;
     width: 100%;
-    background-color:#A31621;
+    /*background-color:#A31621;*/
     line-height: 1.6em;
     font-size: 20px;
     text-shadow: none;
 }
 .navbar a {
-    display: inline-block;
+    display: inline;
     color:#FCF7F8;
     padding: 15px 17px;
     text-decoration: none;
-    text-align: left;
     transition: all ease-in-out 0.2s;
     cursor: pointer;
+    float: left;
 }
 .navbar a:hover {
     color:goldenrod;
