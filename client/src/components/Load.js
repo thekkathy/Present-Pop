@@ -1,6 +1,9 @@
 import React from 'react';
 // import history from '../history';
 import { Redirect } from 'react-router-dom';
+
+import Gift from "../images/gift.png"
+
 import './CSS/Load.css';
 
 class Load extends React.Component {
@@ -21,20 +24,26 @@ class Load extends React.Component {
         clearTimeout(this.timeout);
     }
 
-    getRandomInt(max){
+    getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
-    selectPresent(){
+    selectPresent() {
         console.log(this.getRandomInt(10));
+
     }
 
     render() {
         return (
             this.state.redirect
                 ? <Redirect to="/present" />
-                : <div className="load"> Opening present... </div>
-            )
+                :
+                <div className="load">
+                    <img id="loadImg" src={Gift} alt="gift pic" />
+                        Opening present...
+                    </div>
+
+        )
 
     }
 }

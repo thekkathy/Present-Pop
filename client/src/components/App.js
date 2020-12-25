@@ -15,7 +15,7 @@ class App extends React.Component {
                     <Header />
                     <Route path="/" exact component={OpenPresent} />
                     <Route path="/load" exact component={Load} />
-                    <Route path="/present" exact component={Present} />
+                    <Route path="/present/:id" exact component={Present} />
                 </Router>
             </div>
         );

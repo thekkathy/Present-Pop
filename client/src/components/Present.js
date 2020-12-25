@@ -5,6 +5,17 @@ import Coal from '../images/coal.png';
 import './CSS/Present.css';
 
 class Present extends React.Component {
+    state = { image: '', message: '', href: '' };
+
+    componentDidMount = () => {
+        const id = this.props.match.params.id;
+        console.log(id);
+    }
+
+    renderPresent(){
+        const id = this.props.match.params.id;
+    }
+
     render() {
         return (
             <div>
