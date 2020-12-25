@@ -15,7 +15,8 @@
     opacity: 0.7;
 }
 
-#star:hover {
+#star:hover,
+#socks:hover {
     cursor: initial;
 }
 
@@ -30,7 +31,7 @@
     list-style-type: none;
     width: 25%;
     background-color:#A31621;
-    line-height: 1.6em;
+    line-height: 1.2em;
     font-size: 20px;
     display: inline-block;
     color:#FCF7F8;
