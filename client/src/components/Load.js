@@ -1,5 +1,6 @@
 import React from 'react';
 import history from '../history';
+import './CSS/Load.css';
 
 class Load extends React.Component {
     state = { redirect: false };
