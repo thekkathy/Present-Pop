@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+//import GoogleAuth from './GoogleAuth';
 import './CSS/Header.css';
 
 const Header = () =>    {

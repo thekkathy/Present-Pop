@@ -6,6 +6,7 @@ import Header from './Header';
 import OpenPresent from './OpenPresent';
 import Load from './Load';
 import Present from './Present';
+import Instructions from './Instructions';
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
                     <Route path="/" exact component={OpenPresent} />
                     <Route path="/load" exact component={Load}/>
                     <Route path="/present/:id" exact component={Present} />
+                    <Route path="/instructions" exact component={Instructions} />
                 </Router>
             </div>
         );
