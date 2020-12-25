@@ -20,8 +20,7 @@ class Present extends React.Component {
                 id: "star", 
                 image: Star, 
                 title: "The Star", 
-                message: "Congratulations! There is only a 2% chance of getting this, \
-                you will be blessed with much luck and good fortune next year.",
+                message: "Congratulations! There is only a 2% chance of getting this, you will be blessed with much luck and good fortune next year.",
                 href: "#"
             });
         }
@@ -30,8 +29,7 @@ class Present extends React.Component {
             this.setState({
                 image: Charity, 
                 title: "Charity", 
-                message: "You only have an 8% chance of getting this, so why not take this chance to help another soul? \
-                To donate, click on the image and it will redirect you to a page of charities.",
+                message: "You only have an 8% chance of getting this, so why not take this chance to help another soul? To donate, click on the image and it will redirect you to a page of charities.",
                 href: "https://www.gofundme.com/c/holiday?utm_source=google&utm_medium=cpc&utm_campaign=JoG_Search&utm_content=charity%20donation%20websites&utm_term=charity%20donation%20websites_e_c_&gclid=Cj0KCQiAuJb_BRDJARIsAKkycUnNMRpmU5rzPljCd_GpxG2x4zBnRdDM9AwrgHXuXT7_RafkC_ewBmAaAuHHEALw_wcB"
             });
         }
@@ -71,7 +69,7 @@ class Present extends React.Component {
                     You got...
                 </div>
 
-                <a href={this.state.href}>
+                <a id={this.state.id} href={this.state.href}>
                     <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
                 </a>
 

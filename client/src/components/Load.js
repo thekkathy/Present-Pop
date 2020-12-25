@@ -7,6 +7,7 @@ import Gift from "../images/gift.png"
 import './CSS/Load.css';
 
 class Load extends React.Component {
+
     state = { redirect: false };
 
     componentDidMount() {
@@ -24,22 +25,14 @@ class Load extends React.Component {
         clearTimeout(this.timeout);
     }
 
-    getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    selectPresent() {
-        console.log(this.getRandomInt(10));
-
-    }
-
     render() {
         return (
             this.state.redirect
-                ? <Redirect to="/present" />
+                ? <Redirect to="/present"/>
                 :
                 <div className="load">
-                    <img id="loadImg" src={Gift} alt="gift pic" /> <br></br>
+                    <img id="loadImg" src={Gift} alt="gift pic" />
+                    <br />
                         Opening present...
                     </div>
 
