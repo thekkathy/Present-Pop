@@ -1,0 +1,22 @@
+.presentImage {
+    max-width: 300px;
+    max-height: 300px;
+    display: inline-block;
+}
+
+.presentImage:hover {
+    animation: up_down 500ms ease infinite;
+    position: relative;
+}
+@keyframes up_down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    } 
+} 
+
+.content {
+    margin-top: 20px;
+}
