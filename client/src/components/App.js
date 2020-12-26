@@ -22,67 +22,67 @@ class App extends React.Component {
                     <Route path="/present/:id" exact component={Present} />
                 </Router>
                 
-                <div class="snowflakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div className="snowflakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-                <div class="snowflakes" aria-hidden="true">
-                    <div class="snowflake">
+                <div className="snowflakes" aria-hidden="true">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❅
                     </div>
-                    <div class="snowflake">
+                    <div className="snowflake">
                     ❆
                     </div>
                 </div>
