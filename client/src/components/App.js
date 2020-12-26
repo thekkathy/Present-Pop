@@ -7,23 +7,26 @@ import Header from './Header';
 import OpenPresent from './OpenPresent';
 import Load from './Load';
 import Present from './Present';
-import Instructions from './Instructions';
+// import Instructions from './Instructions';
 
 import { connect } from 'react-redux';
-import { setVisited } from '../actions';
+import { setVisited, setMode } from '../actions';
 
 class App extends React.Component {
+    componentDidMount(){
+        console.log(this.props.mode);
+    }
 
-    componentDidMount() {
-        console.log(`App mount ${this.props.visited}`);
+    onToggle = () =>{
+        this.props.setMode(!this.props.mode);
     }
 
     render() {
         return (
             <div>
                 <Router history={history}>
-                    <Header />
-                    <Route path="/openPresent" exact component={OpenPresent} />
+                    <Header onToggle={this.onToggle}/>
+                    <Route path="/" exact component={OpenPresent} />
                     <Route path="/load" exact component={Load} />
                     <Route path="/present/:id" exact component={Present} />
                 </Router>
@@ -98,7 +101,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return ({ visited: state.visited.alreadyVisited });
+    return ({ visited: state.visited.alreadyVisited, mode: state.mode.mode });
 }
 
-export default connect(mapStateToProps, { setVisited })(App);
+export default connect(mapStateToProps, { setVisited, setMode })(App);
