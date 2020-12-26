@@ -2,6 +2,14 @@ body {
     background-color:#032544;
     color: white;
     text-shadow:2px 2px 4px black;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+div {
+    margin-top: 20px;
 }
 
 .snowflake {
