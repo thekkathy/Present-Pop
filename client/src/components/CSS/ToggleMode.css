@@ -1,8 +1,5 @@
 body {
-    /*background-color:magenta;*/
-    background-color:#032544;
-    color: white;
-    text-shadow:2px 2px 4px black;
+    text-shadow: none;
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
@@ -66,11 +63,27 @@ input:checked + .slider:before {
  .dark {
     background-color:#032544;
     color: #FCF7F8;
-    
+    background-image: url(../../images/background_dark.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 800px;
+    /* width: 100%;
+    height: 100px;   */
 }
 
 .light {
     background-color:#FCF7F8;
-    color:#032544
+    color:#032544;
+    text-shadow: -1px 1px 2px #FCF7F8,
+				  1px 1px 2px #FCF7F8,
+				  1px -1px 0 #FCF7F8,
+				  -1px -1px 0 #FCF7F8;
+    font-weight: bold;
+    background-image: url(../../images/background_light.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 800px;
+    /* width: 100%;
+    height: 100px; */
 }
 
