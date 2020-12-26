@@ -1,4 +1,5 @@
 import {
+    MODE,
     SIGN_IN,
     SIGN_OUT,
     VISITED
@@ -20,5 +21,13 @@ export const signOut = () => {
 export const setVisited = () => {
     return{
         type: VISITED
+    }
+}
+
+//sets LIGHTMODE as true or false
+export const setMode = (mode) =>{
+    return{
+        type: MODE,
+        payload: mode
     }
 }

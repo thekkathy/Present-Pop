@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from './Modal';
-import history from '../history';
+import history from '../../history';
 import { Link } from 'react-router-dom';
 
 class Instructions extends React.Component {
