@@ -162,7 +162,7 @@ body {
         transform: translateY(-10px);
     } 
 } 
-.title {
+.openPresent.title {
     display: inline-block;
     /*font-family: 'Montserrat';*/
     font-size: 40px;
@@ -178,12 +178,12 @@ body {
     }
 }
 
-.subtitle {
+.openPresent.subtitle {
     font-size: 30px;
     margin-top: 20px;
 }
 
-.subtitle:hover{
+.openPresent.subtitle:hover{
     /*animation: fadeIn ease 10s;*/
     animation: pop 1s ease forwards;
 }
