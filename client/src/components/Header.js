@@ -1,19 +1,13 @@
 import React from 'react';
-// import {Link} from 'react-router-dom';
-// import GoogleAuth from './GoogleAuth';
+//import {Link} from 'react-router-dom';
+//import GoogleAuth from './GoogleAuth';
+import ToggleMode from './ToggleMode';
 import './CSS/Header.css';
-
-// <Link to="/openPresent" className="headerLink">
-//                 Open present
-//             </Link>
-//             <Link to="/list" className="headerLink">
-//                 Present List
-//             </Link>
-//             <GoogleAuth />
 
 const Header = () =>    {
     return(
         <div className="navbar">
+            <ToggleMode />
         </div>
     )
 }
