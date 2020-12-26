@@ -13,7 +13,7 @@ const Modal = (props) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="header">{props.title}</div>
-                <div className="content">{props.content}</div>
+                <div className="modalContent">{props.content}</div>
                 <div className="actions">{props.actions}</div>
             </div>
         </div>,
