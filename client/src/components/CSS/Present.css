@@ -12,20 +12,8 @@ body {
     max-width: 250px;
     max-height: 250px;
     margin-top: 0;
-    /* display: inline-block;
-    /*border: 5px solid snow;
-    margin-bottom: 25px;
-    margin-top: 25px; */
-    /* margin-left: auto;
-    margin-right: auto; */
-}
-
-#noStar.presentImage {
-    position: absolute;
-    left: 50%;
-    margin-left: -125px;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    position: block;
+    margin: 0 auto;
 }
 
 #noStar:hover {
@@ -50,12 +38,13 @@ body {
     height: 20px; */
 }
 
-#noStar .present .title {
+/* #noStar .present .title {
     margin-top: 275px;
-}
+} */
 
 .content {
     margin-top: 25px;
+    position: block;
 } 
 
 #goBack {

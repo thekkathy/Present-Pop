@@ -112,11 +112,11 @@ class Present extends React.Component {
         }
         else {
             return (
-                <td
+                <div
                     onClick={() => window.open(this.state.href, "_blank")}
                     id={this.state.id} >
                     <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
-                </td>
+                </div>
             );
         }
     }
