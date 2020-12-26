@@ -152,6 +152,34 @@
     animation-delay:3s,3s
 }
 
+.ReactModal__Content--after-open {
+    position: 'fixed';
+    border-radius: 50px;
+    max-width: 500px;
+    max-height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 2000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
+
+#instructions {
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.4em;
+}
+
 #gift {
     max-width: 300px;
     max-height: 300px;

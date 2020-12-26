@@ -63,9 +63,11 @@ class OpenPresent extends React.Component {
                         >
                             <h1 id="instructionTitle">Welcome to Present Pop!</h1>
                             <p id="instructions"> {instructions} </p>
-                            <button onClick={this.handleCloseModal}>
-                                🎁 Start Opening Presents 🎁
-                        </button>
+                            <button id="goBack" onClick={this.handleCloseModal}>
+                                <span>
+                                    🎁 Start Opening Presents 🎁
+                                </span>
+                            </button>
                         </ReactModal>
                     </div>
                 }
