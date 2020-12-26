@@ -1,20 +1,26 @@
-import React, { useEffect } from 'react';
-//import {Link} from 'react-router-dom';
-//import GoogleAuth from './GoogleAuth';
+import React from 'react';
+import { connect } from 'react-redux';
+import { setMode } from '../actions';
 import ToggleMode from './ToggleMode';
 import './CSS/Header.css';
 
-const Header = (props) => {
-    useEffect(()=>{
-        console.log(props);
-    }, []);
+class Header extends React.Component {
+    state={toggleState: false};
+
+    render(){
+        return (
+            <div className="navbar">
+                <ToggleMode onToggle={this.setToggle} />
+            </div>
+        );
+    }
+
 
     
-    return (
-        <div className="navbar">
-            <ToggleMode onToggle={props.onToggle} />
-        </div>
-    )
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return { mode: state.mode.mode };
+}
+
+export default connect(mapStateToProps, {setMode})(Header);

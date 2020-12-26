@@ -5,15 +5,19 @@ import { connect } from 'react-redux';
 import { setMode } from '../actions';
 
 class ToggleMode extends React.Component {
-    state = { light: true };
 
     componentDidUpdate() {
         console.log(`toggle mode ${this.props}`);
     }
 
-    onClick() {
-        //this.props.onToggle();
-        //this.setState(this.props.mode);
+    onClick = () => {
+        console.log(this.props)
+        //this.props.onToggle.setToggle(!this.props.mode);
+    }
+
+    onToggle = () => {
+        console.log("mode set!")
+        this.props.setMode(!this.props.mode.mode);
     }
 
     render() {
@@ -22,7 +26,7 @@ class ToggleMode extends React.Component {
                 <div className="theme-switch-wrapper">
                     <label className="theme-switch" htmlFor="checkbox">
                         <input type="checkbox" id="checkbox"
-                            onClick={this.onClick}
+                            onClick={this.onToggle}
                             className="toggleBackground" />
 
                         <div className="slider round"></div>
