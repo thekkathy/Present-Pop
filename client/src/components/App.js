@@ -10,16 +10,10 @@ import Present from './Present';
 // import Instructions from './Instructions';
 
 import { connect } from 'react-redux';
-import { setVisited, setMode } from '../actions';
+import { setVisited } from '../actions';
 
 class App extends React.Component {
-    componentDidMount(){
-        console.log(this.props.mode);
-    }
 
-    onToggle = () =>{
-        this.props.setMode(!this.props.mode);
-    }
 
     render() {
         return (
@@ -101,7 +95,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return ({ visited: state.visited.alreadyVisited, mode: state.mode.mode });
+    return ({ visited: state.visited.alreadyVisited });
 }
 
-export default connect(mapStateToProps, { setVisited, setMode })(App);
+export default connect(mapStateToProps, { setVisited })(App);
