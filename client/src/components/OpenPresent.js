@@ -9,12 +9,12 @@ class OpenPresent extends React.Component {
     render() {
         return (
             <div className="openPresent">
-                <h1 className="title">
+                <h1 className="title" id="mainTitle">
                     Present 
                     <div className="pop">Pop</div>
                 </h1>
 
-                <h2 className="subtitle">
+                <h2 className="subtitle" id="mainSubtitle">
                     A drop of surprise 🙃
                 </h2>
 
