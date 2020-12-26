@@ -135,7 +135,7 @@ class Present extends React.Component {
 
                 <div className="content">{this.state.message}</div>
 
-                <Link to="/" id="goBack">
+                <Link to="/openPresent" id="goBack">
                     <span>
                         🎁 Open another present 🎁
                 </span>

@@ -10,7 +10,7 @@ class Instructions extends React.Component {
 
         return (
             <React.Fragment>
-                <Link to="/" className="button">
+                <Link to="/openPresent" className="button">
                     Start Opening Presents
                 </Link>
             </React.Fragment>
@@ -24,7 +24,7 @@ class Instructions extends React.Component {
                 title="Instructions"
                 content="My content"
                 actions={this.renderActions()}
-                onDismiss={() => history.push('/')}
+                onDismiss={() => history.push('/openPresent')}
             />
         );
     }

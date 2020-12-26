@@ -6,7 +6,7 @@ import './CSS/Header.css';
 const Header = () =>    {
     return(
         <div className="navbar">
-            <Link to="/" className="headerLink">
+            <Link to="/openPresent" className="headerLink">
                 Open present
             </Link>
             <Link to="/list" className="headerLink">

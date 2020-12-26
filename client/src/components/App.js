@@ -15,10 +15,10 @@ class App extends React.Component {
             <div>
                 <Router history={history}>
                     <Header />
-                    <Route path="/" exact component={OpenPresent} />
+                    <Route path="/" exact component={Instructions} />
+                    <Route path="/openPresent" exact component={OpenPresent} />
                     <Route path="/load" exact component={Load}/>
                     <Route path="/present/:id" exact component={Present} />
-                    <Route path="/instructions" exact component={Instructions} />
                 </Router>
             </div>
         );
