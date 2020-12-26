@@ -25,22 +25,14 @@ body {
     cursor: initial;
 }
 
- /* #noStar {
-    margin-left: auto;
-    margin-right: auto;
-}  */
-
 #rudolph {
-    margin: 100px 100px 100px 100px;
-    /* background-image: url(../images/rudolph.png);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 20px; */
+    background-image: url(../../images/rudolph.png);
+    background-size: 250px 250px;
+    height: 250px;  
+    width: 250px;
+    margin: 25px 25px 25px 25px;
+    border-color: rgb(0, 0, 0, 0);
 }
-
-/* #noStar .present .title {
-    margin-top: 275px;
-} */
 
 .content {
     margin-top: 25px;
