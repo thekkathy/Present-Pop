@@ -170,7 +170,7 @@ div {
         transform: translateY(-10px);
     } 
 } 
-.openPresent.title {
+#mainTitle {
     display: inline-block;
     /*font-family: 'Montserrat';*/
     font-size: 40px;
@@ -178,6 +178,10 @@ div {
     text-transform: none;
     margin-bottom: 20px;
     animation: pop 2s ease forwards;
+}
+
+.pop {
+    display: inline;
 }
 
 @keyframes pop{
