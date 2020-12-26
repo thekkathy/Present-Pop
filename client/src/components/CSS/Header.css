@@ -25,10 +25,8 @@ body{
     float: left;
 }
 .navbar a:hover {
-    color:goldenrod;
+    color:#032544;
     /*border: 1px solid #888;*/
-    background-color: #ddd;
-}
-.button {
-    background-color:rebeccapurple;
+    background-color: #FCF7F8;
+    border-radius: 4px;
 }

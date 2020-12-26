@@ -3,13 +3,13 @@ body {
     color: white;
     text-shadow:2px 2px 4px black;
 }
+
 .snowflake {
     color: #fff;
     font-size: 20px;
     font-family: Arial, sans-serif;
     text-shadow: 0 0 5px #000;
-}
-  
+}  
 @-webkit-keyframes snowflakes-fall{
     0%{
         top:-10%
@@ -163,11 +163,27 @@ body {
     } 
 } 
 .title {
-    text-transform: uppercase;
+    display: inline-block;
+    /*font-family: 'Montserrat';*/
     font-size: 40px;
     line-height: 0.5em;
+    text-transform: none;
+    margin-bottom: 20px;
+    animation: pop 2s ease forwards;
 }
+
+@keyframes pop{
+    100%  {
+      transform: scale(2.5);
+    }
+}
+
 .subtitle {
     font-size: 30px;
     margin-top: 20px;
+}
+
+.subtitle:hover{
+    /*animation: fadeIn ease 10s;*/
+    animation: pop 1s ease forwards;
 }
