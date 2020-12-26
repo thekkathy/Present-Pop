@@ -2,22 +2,22 @@ import React from 'react';
 import './CSS/ToggleMode.css';
 
 class ToggleMode extends React.Component {
-    state = { light: true };
+    state = { light: false };
 
     renderLight = (
-        <script>
-            {() => {
-                document.body.classList.toggle("light");
-            }}
-        </script>
+        <div>
+            <script>
+                {document.body.classList.toggle("light")}
+            </script>
+        </div>
     );
 
     renderDark = (
-        <script>
-            {() => {
-                document.body.classList.toggle("dark");
-            }}
-        </script>
+        <div>
+            <script>
+                {document.body.classList.toggle("dark")}
+            </script>
+        </div>
     );
 
     render() {
@@ -26,11 +26,14 @@ class ToggleMode extends React.Component {
                 <button
                     onClick={() => this.setState({ light: !this.state.light })}
                     className="toggleBackground">
-                    Toggle
+                    {this.state.light ?
+                        "Light Mode" :
+                        "Dark Mode"
+                    }
                 </button>
-                {this.state.light ? 
-                    <div>light</div> : 
-                    <div>dark</div>
+                {this.state.light ?
+                    this.renderLight :
+                    this.renderDark
                 }
             </div>
         );
