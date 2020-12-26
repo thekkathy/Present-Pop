@@ -11,7 +11,7 @@ class OpenPresent extends React.Component {
             <div className="openPresent">
                 <h1 className="title" id="mainTitle">
                     Present 
-                    <div className="pop">Pop</div>
+                    <div className="pop"> Pop</div>
                 </h1>
 
                 <h2 className="subtitle" id="mainSubtitle">
