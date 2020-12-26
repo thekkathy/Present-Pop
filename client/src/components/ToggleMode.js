@@ -23,18 +23,34 @@ class ToggleMode extends React.Component {
     render() {
         return (
             <div>
-                <button
+                {/* <button
                     onClick={() => this.setState({ light: !this.state.light })}
                     className="toggleBackground">
                     {this.state.light ?
-                        "Light Mode" :
-                        "Dark Mode"
+                        "Dark Mode" :
+                        "Light Mode"
                     }
                 </button>
                 {this.state.light ?
                     this.renderLight :
                     this.renderDark
-                }
+                } */}
+                <div className="theme-switch-wrapper">
+                    <label className="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" 
+                            onClick={() => this.setState({ light: !this.state.light })}
+                            className="toggleBackground"/>
+ 
+                        <div className="slider round"></div>
+                        <br></br><br></br>
+                        <div className="toggleName"> 
+                            {this.state.light ?
+                                "Dark Mode" :
+                                "Light Mode"    
+                            }
+                        </div>
+                    </label>
+                </div>
             </div>
         );
     }
