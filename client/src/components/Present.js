@@ -125,13 +125,13 @@ class Present extends React.Component {
         Howler.volume(1.0);
         return (
             <div className="present">
-                <div className="subtitle">
+                <div className="subtitle" id="presentSubtitle">
                     You got...
                 </div>
 
                 {this.renderImage()}
 
-                <div className="title">{this.state.title}</div>
+                <div className="title" id="presentTitle">{this.state.title}</div>
 
                 <div className="content">{this.state.message}</div>
 
