@@ -16,7 +16,7 @@ div {
     color: #fff;
     font-size: 20px;
     font-family: Arial, sans-serif;
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 2px #000;
 }  
 @-webkit-keyframes snowflakes-fall{
     0%{
@@ -177,25 +177,38 @@ div {
     line-height: 0.5em;
     text-transform: none;
     margin-bottom: 20px;
-    animation: pop 2s ease forwards;
+    margin-top: 0;
+    animation: enlarge 2s ease forwards;
 }
 
 .pop {
     display: inline;
 }
 
-@keyframes pop{
+@keyframes enlarge{
     100%  {
       transform: scale(2.5);
     }
 }
 
-.openPresent.subtitle {
+#mainSubtitle {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
+    /*margin-top: -40px;*/
+    /*animation: fall-in 3s ease;*/
 }
 
-.openPresent.subtitle:hover{
-    /*animation: fadeIn ease 10s;*/
-    animation: pop 1s ease forwards;
+/* #mainSubtitle:hover{
+    /*animation: fadeIn ease 10s;
+    animation: fall-in 1s ease forwards;
+} */
+
+@animation fall-in {
+    100% {
+        transform: translateY(-70px);
+    } 
+}
+
+.content {
+    margin: 0;
 }
