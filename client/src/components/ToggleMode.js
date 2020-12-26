@@ -54,7 +54,8 @@ class ToggleMode extends React.Component {
                     </label>
                 </div>
                 <script>
-                {/* {document.body.classList.toggle("light")} */}
+                    {document.body.classList.toggle("dark")}
+                    {document.body.classList.toggle("light")}
                 </script>
             </div>
         );
