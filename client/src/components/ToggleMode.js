@@ -20,6 +20,16 @@ class ToggleMode extends React.Component {
         this.props.setMode(!this.props.mode.mode);
     }
 
+    light = () =>{
+        document.body.classList.toggle("light", true);
+        document.body.classList.toggle("dark", false)
+    }
+
+    dark = () =>{
+        document.body.classList.toggle("light", false);
+        document.body.classList.toggle("dark", true)
+    }
+
     render() {
         return (
             <div>
@@ -43,8 +53,8 @@ class ToggleMode extends React.Component {
                 </div>
                 <script>
                     {this.props.mode.mode ?
-                        document.body.classList.toggle("light", true) :
-                        document.body.classList.toggle("light", false)
+                        this.light() :
+                        this.dark()
                     }
                 </script>
             </div>

@@ -161,7 +161,7 @@
     text-align: center;
 }
 
-.ReactModal__Overlay {
+/* .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 2000ms ease-in-out;
 }
@@ -172,7 +172,7 @@
 
  .ReactModal__Overlay--before-close{
     opacity: 0;
-}
+} */
 
 /*
 .ReactModal__Overlay--after-close{
@@ -182,7 +182,8 @@
 #instructions {
     margin: 0 auto;
     width: 80%;
-    line-height: 1.4em;
+    line-height: 1.5em;
+    font-weight: normal;
 }
 
 #gift {
@@ -207,7 +208,6 @@
 
 #mainTitle {
     display: inline-block;
-    /*font-family: 'Montserrat';*/
     font-size: 40px;
     line-height: 0.5em;
     text-transform: none;
@@ -233,7 +233,6 @@
     
     animation: down 1s ease forwards;
     animation-delay: 2s;
-    /* animation: up_down 500ms ease 3x; */
 }
 
 /* #mainSubtitle:hover{
