@@ -1,45 +1,72 @@
 .modal {
-    /*display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    padding-top: 10px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+    position:fixed;
+    display:table;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    transition: all ease 1s;
+}
+
+@keyframes unfoldOut {
+    0% {
+      transform:scaleY(1) scaleX(1);
+    }
+    50% {
+      transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+      transform:scaleY(.005) scaleX(0);
+    }
+}
+
+.header {
+    font-size: 40px;
 }
 
 /* Modal Content */
 .modalContent {
-    background-color: white;
+    background-color: #FCF7F8;
     margin: auto;
-    padding: 20px;
-    /*border: 1px solid #888;*/
+    padding: 75px 40px 125px 40px;
+    border: 1px solid #888;
     width: 80%;
+    color: #032544;
+    text-shadow: none;
+    font-size: 20px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    border-radius: 4px;
+}
+
+.actions {
+    margin-top: -50px;
 }
 
 .button {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
+    overflow: hidden;
+    width: 25%;
+    line-height: 1.2em;
+    font-size: 20px;
+    color:#FCF7F8;
+    padding: 15px 17px;
+    text-align: center;
+    background-color: #A31621;
+    border-radius: 4px;
+    text-shadow: none;
+    /*border:  2px solid #FCF7F8;*/
+    transition: all ease-in-out 0.2s;
     text-decoration: none;
-    cursor: pointer;
+}
+
+.button:hover {
+    color:#032544;
+    /*border: 1px solid #888;*/
+    background-color: #FCF7F8;
 }
