@@ -7,6 +7,9 @@ import Socks from '../images/regifted_socks.png';
 import Rudolph from '../images/rudolph.png';
 import Charity from '../images/charity.png';
 import Star from '../images/star.png';
+import Rocks from '../images/rocks.png';
+import SATPrep from '../images/sat.png';
+import Ornaments from '../images/ornaments.png';
 import RudolphSong from '../rudolph.mp3';
 
 import './CSS/Present.css';
@@ -52,31 +55,62 @@ class Present extends React.Component {
         }
         // ok tier
         else if (id >= 10 && id < 30) {
-            this.setState({
-                id: "rudolph",
-                image: Rudolph,
-                title: "Rudolph",
-                message: "Rudolph the red nosed reindeer...(psst, click on the image to sing along)",
-            });
+            if(id%2){
+                this.setState({
+                    id: "rudolph",
+                    image: Rudolph,
+                    title: "Rudolph",
+                    message: "Rudolph the red nosed reindeer...(psst, click on the image to sing along)",
+                });
+            }
+            else{
+                this.setState({
+                    id: "ornaments",
+                    image: Ornaments,
+                    title: "Ornaments",
+                    message: "They're actually kind of pretty. Turn on dark mode for a better effect.",
+                });
+            }
         }
         // mid tier
         else if (id >= 30 && id < 60) {
-            this.setState({
-                id: "socks",
-                image: Socks,
-                title: "Regifted Socks",
-                message: "They didn't even try to hide it...",
-                href: ""
-            });
+            if(id%2){
+                this.setState({
+                    id: "socks",
+                    image: Socks,
+                    title: "Regifted Socks",
+                    message: "They didn't even try to hide it...",
+                    href: ""
+                });
+            }
+            else{
+                this.setState({
+                    image: SATPrep,
+                    title: "Outdated SAT Prep Book",
+                    message: "You need this right.....? (If you want, you can click on the icon to buy one from amazon 🙂)",
+                    href: "https://www.amazon.com/How-Prepare-SAT-2007-2008-Barrons/dp/0764134493/ref=sr_1_4?dchild=1&keywords=2008+sat+prep+books&qid=1609036095&s=books&sr=1-4"
+                });
+            }
         }
         // bottom tier
         else if (id >= 60 && id < 100) {
-            this.setState({
-                image: Coal,
-                title: "Coal",
-                message: "A flammable black rock. Click on the image to educate yourself :)",
-                href: "https://en.wikipedia.org/wiki/Coal"
-            });
+            if(id % 2){
+                this.setState({
+                    image: Coal,
+                    title: "Coal",
+                    message: "A flammable black rock. Click on the image to educate yourself :)",
+                    href: "https://en.wikipedia.org/wiki/Coal"
+                });
+            }
+            else{
+                this.setState({
+                    id: "rocks", 
+                    image: Rocks,
+                    title: "Rocks",
+                    message: "Rocks. Just rocks.",
+                    href: ""
+                });
+            }
         }
     }
 
@@ -103,7 +137,7 @@ class Present extends React.Component {
                 <button id={this.state.id} onClick={this.togglePlay} />
             );
         }
-        else if (this.state.id === "star" || this.state.id === "socks") {
+        else if (this.state.id === "star" || this.state.id === "socks" || this.state.id === "rocks" || this.state.id === "ornaments") {
             return (
                 <div id={this.state.id}>
                     <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
