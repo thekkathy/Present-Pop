@@ -152,18 +152,17 @@
     animation-delay:3s,3s
 }
 
-.ReactModal__Content--after-open {
+.ReactModal__Content {
     position: 'fixed';
-    border-radius: 50px;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 350px;
+    max-height: 300px;
     margin: 0 auto;
     text-align: center;
     color: #032544;
-    /* opacity: 1; */
 }
 
-.ReactModal__Overlay {
+/*
+ .ReactModal__Overlay {
     opacity: 1;
     transition: opacity 5s ease-in-out;
 }
@@ -173,15 +172,15 @@
 }
 
  .ReactModal__Overlay--before-close{
-    /* transition: opacity 3s ease-in-out;*/
     opacity: 1;
-}
+} */
 
 #instructions {
-    margin: 0 auto;
+    margin: 15px auto;
     width: 80%;
     line-height: 1.5em;
     font-weight: normal;
+    font-size: 20px;
 }
 
 #gift {
