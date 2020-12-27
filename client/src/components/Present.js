@@ -151,6 +151,7 @@ class Present extends React.Component {
             return (
                 <div id={this.state.id}>
                     <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
+                    <span id={this.state.id} className="darkModeSuperiority">But you should already be on Dark Mode since Dark Mode is clearly superior</span>
                 </div>
             );
         }

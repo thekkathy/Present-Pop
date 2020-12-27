@@ -16,14 +16,42 @@
     margin: 0 auto;
 }
 
-#noStar:hover {
+#noStar:hover,
+#snowman:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
 #star:hover,
-#socks:hover {
+#socks:hover
+#ornaments:hover,
+#rocks:hover {
     cursor: initial;
+}
+
+#star,
+#socks,
+#rocks,
+#snowman,
+#ornaments {
+    display: inline-block;
+    transform: translateX(30px);
+}
+
+.darkModeSuperiority {
+    color: #FCF7F8;
+    padding: 8px;
+    position: block;
+    float:right;
+    opacity: 0;
+    max-width: 100px;
+    margin-right: 25px;
+}
+
+#ornaments .darkModeSuperiority:hover {
+    padding: 8px;
+    opacity: 1;
+    color:#FCF7F8;
 }
 
 #rudolph {
