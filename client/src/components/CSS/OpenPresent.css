@@ -211,7 +211,7 @@
     text-transform: none;
     margin-bottom: 20px;
     margin-top: 0;
-    animation: enlarge 2s ease forwards;
+    animation: enlarge 1s ease forwards;
 }
 
 .pop {
@@ -230,7 +230,7 @@
     opacity: 0;
     
     animation: down 1s ease forwards;
-    animation-delay: 2s;
+    animation-delay: 0.25s;
 }
 
 /* #mainSubtitle:hover{
