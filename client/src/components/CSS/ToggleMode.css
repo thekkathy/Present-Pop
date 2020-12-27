@@ -2,7 +2,7 @@ body {
     text-shadow: none;
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pangolin', cursive; 
     text-align: center;
 }
 
@@ -74,15 +74,14 @@ input:checked + .slider:before {
 .light {
     background-color:#FCF7F8;
     color:#032544;
-    text-shadow: -1px 1px 2px #FCF7F8,
+    /* text-shadow: -1px 1px 2px #FCF7F8,
 				  1px 1px 2px #FCF7F8,
 				  1px -1px 0 #FCF7F8,
-				  -1px -1px 0 #FCF7F8;
+				  -1px -1px 0 #FCF7F8; */
     font-weight: bold;
     background-image: url(../../images/background_light.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 800px;
-
 }
 
