@@ -66,7 +66,7 @@ input:checked + .slider:before {
     background-image: url(../../images/background_dark.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto 800px;
+    background-size: cover;
     text-shadow: none;
     font-weight: normal;
 }
