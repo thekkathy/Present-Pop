@@ -161,19 +161,18 @@
     color: #032544;
 }
 
-/*
- .ReactModal__Overlay {
-    opacity: 1;
-    transition: opacity 5s ease-in-out;
-}
-
-.ReactModal__Overlay--after-open{
+.ReactModal__Overlay {
     opacity: 0;
-}
-
- .ReactModal__Overlay--before-close{
+    transition: all 500ms ease;
+  }
+  
+  .ReactModal__Overlay--after-open {
     opacity: 1;
-} */
+  }
+  
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
 
 #instructions {
     margin: 15px auto;

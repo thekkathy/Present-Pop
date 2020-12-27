@@ -55,49 +55,50 @@ class OpenPresent extends React.Component {
                 {this.props.visited ?
                     null :
                     <div>
-                        <ReactModal
-                            isOpen={this.state.showModal}
-                            onAfterClose={this.afterCloseModal}
-                            contentLabel="Instructions modal"
-                            // onRequestClose={this.handleCloseModal}
-                            shouldCloseOnOverlayClick={true}
-                            style={{
-                                overlay: {
-                                  position: 'fixed',
-                                  top: 0,
-                                  left: 0,
-                                  right: 0,
-                                  bottom: 0,
-                                  backgroundColor: 'rgba(0, 0, 0, 0.75)'
-                                },
-                                content: {
-                                  position: 'absolute',
-                                  top: '40px',
-                                  left: '40px',
-                                  right: '40px',
-                                  bottom: '40px',
-                                  background: '#FCF7F8',
-                                  overflow: 'auto',
-                                  WebkitOverflowScrolling: 'touch',
-                                  borderRadius: '4px',
-                                  outline: 'none',
-                                  padding: '20px'
-                                }
-                              }}
-                        >
-                            <h1 id="instructionTitle">Welcome to Present Pop!</h1>
-                            <p id="instructions"> {instructions} </p>
-                            <button id="goBack" onClick={this.handleCloseModal}>
-                                <span>
-                                    🎁 Start Opening Presents 🎁
-                                </span>
-                            </button>
-                        </ReactModal>
-                        {/* <CSSTransition
+                        <CSSTransition
                             timeout={300}
                             classNames="dialog"
                             >
-                        </CSSTransition> */}
+                            <ReactModal
+                                closeTimeoutMS={500}
+                                isOpen={this.state.showModal}
+                                onAfterClose={this.afterCloseModal}
+                                contentLabel="Instructions modal"
+                                onRequestClose={this.handleCloseModal}
+                                shouldCloseOnOverlayClick={true}
+                                style={{
+                                    overlay: {
+                                    position: 'fixed',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    backgroundColor: 'rgba(200, 200, 200, 0.75)'
+                                    },
+                                    content: {
+                                    position: 'absolute',
+                                    top: '40px',
+                                    left: '40px',
+                                    right: '40px',
+                                    bottom: '40px',
+                                    background: '#FCF7F8',
+                                    overflow: 'auto',
+                                    WebkitOverflowScrolling: 'touch',
+                                    borderRadius: '4px',
+                                    outline: 'none',
+                                    padding: '20px'
+                                    }
+                                }}
+                            >
+                                <h1 id="instructionTitle">Welcome to Present Pop!</h1>
+                                <p id="instructions"> {instructions} </p>
+                                <button id="goBack" onClick={this.handleCloseModal}>
+                                    <span>
+                                        🎁 Start Opening Presents 🎁
+                                    </span>
+                                </button>
+                            </ReactModal>
+                        </CSSTransition>
                     </div>
                 }
 
