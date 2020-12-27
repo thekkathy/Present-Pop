@@ -117,7 +117,7 @@ class Present extends React.Component {
                     id: "snowman", 
                     image: MeltedSnowman,
                     title: "Melted Snowman",
-                    message: "The sun was just too bright today. On the bright side, click on the image for a fun clip.",
+                    message: "The sun was just too hot today. On the bright side, click on the image for a fun clip.",
                     href: "https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYAuQxZBf55Y%26ab_channel%3DDavidRojas&h=AT3rJdym9PWbsoZC72_3Z9PVrnY9p1oZ4U77UcpsMha0R5fbGLWmCcolaH2xgMnw6Pne3f6ImvnpXB4DK2N_CFpM7FGhgH3rpINk8B88gV_TzPDh656i_5IZfm4zUM8r7Nhf4Q"
                 });
             }
