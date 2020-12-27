@@ -159,25 +159,23 @@
     max-height: 500px;
     margin: 0 auto;
     text-align: center;
+    color: #032544;
+    /* opacity: 1; */
 }
 
-/* .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 2000ms ease-in-out;
+.ReactModal__Overlay {
+    opacity: 1;
+    transition: opacity 5s ease-in-out;
 }
 
 .ReactModal__Overlay--after-open{
-    opacity: 1;
+    opacity: 0;
 }
 
  .ReactModal__Overlay--before-close{
-    opacity: 0;
-} */
-
-/*
-.ReactModal__Overlay--after-close{
+    /* transition: opacity 3s ease-in-out;*/
     opacity: 1;
-} */
+}
 
 #instructions {
     margin: 0 auto;

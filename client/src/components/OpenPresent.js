@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactModal from 'react-modal';
+import { CSSTransition } from 'react-transition-group';
 
 import { connect } from 'react-redux';
 import { setVisited } from '../actions';
@@ -58,7 +59,7 @@ class OpenPresent extends React.Component {
                             isOpen={this.state.showModal}
                             onAfterClose={this.afterCloseModal}
                             contentLabel="Instructions modal"
-                            onRequestClose={this.handleCloseModal}
+                            // onRequestClose={this.handleCloseModal}
                             shouldCloseOnOverlayClick={true}
                         >
                             <h1 id="instructionTitle">Welcome to Present Pop!</h1>
@@ -69,6 +70,11 @@ class OpenPresent extends React.Component {
                                 </span>
                             </button>
                         </ReactModal>
+                        {/* <CSSTransition
+                            timeout={300}
+                            classNames="dialog"
+                            >
+                        </CSSTransition> */}
                     </div>
                 }
 
