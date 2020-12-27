@@ -68,7 +68,7 @@ class Present extends React.Component {
                     id: "ornaments",
                     image: Ornaments,
                     title: "Ornaments",
-                    message: "They're actually kind of pretty. Turn on dark mode for a better effect.",
+                    message: "They're actually kind of pretty (PS: turn on dark mode for a better effect)",
                 });
             }
         }
