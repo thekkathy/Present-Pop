@@ -10,6 +10,7 @@ import Star from '../images/star.png';
 import Rocks from '../images/rocks.png';
 import SATPrep from '../images/sat.png';
 import Ornaments from '../images/ornaments.png';
+import MeltedSnowman from '../images/melted_snowman.png';
 import RudolphSong from '../rudolph.mp3';
 
 import './CSS/Present.css';
@@ -73,7 +74,7 @@ class Present extends React.Component {
             }
         }
         // mid tier
-        else if (id >= 30 && id < 60) {
+        else if (id >= 30 && id < 55) {
             if(id%2){
                 this.setState({
                     id: "socks",
@@ -93,8 +94,8 @@ class Present extends React.Component {
             }
         }
         // bottom tier
-        else if (id >= 60 && id < 100) {
-            if(id % 2){
+        else if (id >= 55 && id < 100) {
+            if(id % 3 === 2){
                 this.setState({
                     image: Coal,
                     title: "Coal",
@@ -102,13 +103,22 @@ class Present extends React.Component {
                     href: "https://en.wikipedia.org/wiki/Coal"
                 });
             }
-            else{
+            else if (id%3 === 1){
                 this.setState({
                     id: "rocks", 
                     image: Rocks,
                     title: "Rocks",
                     message: "Rocks. Just rocks.",
                     href: ""
+                });
+            }
+            else{
+                this.setState({
+                    id: "snowman", 
+                    image: MeltedSnowman,
+                    title: "Melted Snowman",
+                    message: "The sun was just too bright today. On the bright side, click on the image for a fun clip.",
+                    href: "https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYAuQxZBf55Y%26ab_channel%3DDavidRojas&h=AT3rJdym9PWbsoZC72_3Z9PVrnY9p1oZ4U77UcpsMha0R5fbGLWmCcolaH2xgMnw6Pne3f6ImvnpXB4DK2N_CFpM7FGhgH3rpINk8B88gV_TzPDh656i_5IZfm4zUM8r7Nhf4Q"
                 });
             }
         }
