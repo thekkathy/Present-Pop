@@ -7,7 +7,7 @@ import Header from './Header';
 import OpenPresent from './OpenPresent';
 import Load from './Load';
 import Present from './Present';
-// import Instructions from './Instructions';
+import Video from './Video';
 
 import { connect } from 'react-redux';
 import { setVisited } from '../actions';
@@ -23,6 +23,7 @@ class App extends React.Component {
                     <Route path="/" exact component={OpenPresent} />
                     <Route path="/load" exact component={Load} />
                     <Route path="/present/:id" exact component={Present} />
+                    <Route path="/mystery/:id" exact component={Video} />
                 </Router>
 
                 <div className="snowflakes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>

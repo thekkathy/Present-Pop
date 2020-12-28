@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Howl, Howler } from 'howler';
+import { generateRandomNumber } from '../generateRandom';
 
 import Coal from '../images/coal.png';
 import Socks from '../images/regifted_socks.png';
@@ -11,6 +12,8 @@ import Rocks from '../images/rocks.png';
 import SATPrep from '../images/sat.png';
 import Ornaments from '../images/ornaments.png';
 import MeltedSnowman from '../images/melted_snowman.png';
+import Mii from '../images/mii.png';
+
 import RudolphSong from '../rudolph.mp3';
 
 import './CSS/Present.css';
@@ -47,16 +50,26 @@ class Present extends React.Component {
         }
         // good tier
         else if (id >= 3 && id < 10) {
-            this.setState({
-                image: Charity,
-                title: "Charity",
-                message: "You only have an 8% chance of getting this, so why not take this chance to help another soul? To donate, click on the image and it will redirect you to a page of charities.",
-                href: "https://www.gofundme.com/c/holiday?utm_source=google&utm_medium=cpc&utm_campaign=JoG_Search&utm_content=charity%20donation%20websites&utm_term=charity%20donation%20websites_e_c_&gclid=Cj0KCQiAuJb_BRDJARIsAKkycUnNMRpmU5rzPljCd_GpxG2x4zBnRdDM9AwrgHXuXT7_RafkC_ewBmAaAuHHEALw_wcB"
-            });
+            if (id % 2) {
+                this.setState({
+                    image: Charity,
+                    title: "Charity",
+                    message: "You only have an 4% chance of getting this, so why not take this chance to help another soul? To donate, click on the image and it will redirect you to a page of charities.",
+                    href: "https://www.gofundme.com/c/holiday?utm_source=google&utm_medium=cpc&utm_campaign=JoG_Search&utm_content=charity%20donation%20websites&utm_term=charity%20donation%20websites_e_c_&gclid=Cj0KCQiAuJb_BRDJARIsAKkycUnNMRpmU5rzPljCd_GpxG2x4zBnRdDM9AwrgHXuXT7_RafkC_ewBmAaAuHHEALw_wcB"
+                });
+            }
+            else {
+                this.setState({
+                    id: 'mii',
+                    image: Mii,
+                    title: "A Mystery Item",
+                    message: "I wonder what it is. Click the icon to see what you got.",
+                });
+            }
         }
         // ok tier
         else if (id >= 10 && id < 30) {
-            if(id%2){
+            if (id % 2) {
                 this.setState({
                     id: "rudolph",
                     image: Rudolph,
@@ -64,7 +77,7 @@ class Present extends React.Component {
                     message: "Rudolph the red nosed reindeer...(psst, click on the image to sing along)",
                 });
             }
-            else{
+            else {
                 this.setState({
                     id: "ornaments",
                     image: Ornaments,
@@ -75,7 +88,7 @@ class Present extends React.Component {
         }
         // mid tier
         else if (id >= 30 && id < 55) {
-            if(id%2){
+            if (id % 2) {
                 this.setState({
                     id: "socks",
                     image: Socks,
@@ -84,7 +97,7 @@ class Present extends React.Component {
                     href: ""
                 });
             }
-            else{
+            else {
                 this.setState({
                     image: SATPrep,
                     title: "Outdated SAT Prep Book",
@@ -95,7 +108,7 @@ class Present extends React.Component {
         }
         // bottom tier
         else if (id >= 55 && id < 100) {
-            if(id % 3 === 2){
+            if (id % 3 === 2) {
                 this.setState({
                     image: Coal,
                     title: "Coal",
@@ -103,18 +116,18 @@ class Present extends React.Component {
                     href: "https://en.wikipedia.org/wiki/Coal"
                 });
             }
-            else if (id%3 === 1){
+            else if (id % 3 === 1) {
                 this.setState({
-                    id: "rocks", 
+                    id: "rocks",
                     image: Rocks,
                     title: "Rocks",
                     message: "Rocks. Just rocks.",
                     href: ""
                 });
             }
-            else{
+            else {
                 this.setState({
-                    id: "snowman", 
+                    id: "snowman",
                     image: MeltedSnowman,
                     title: "Melted Snowman",
                     message: "The sun was just too hot today. On the bright side, click on the image for a fun clip.",
@@ -145,6 +158,14 @@ class Present extends React.Component {
         if (this.state.title === "Rudolph") {
             return (
                 <button id={this.state.id} onClick={this.togglePlay} />
+            );
+        }
+        else if (this.state.id === "mii") {
+            const mystId = generateRandomNumber();
+            return (
+                <Link to={`/mystery/${mystId}`}>
+                    <img id={this.state.id} className="presentImage" src={this.state.image} alt="present" />
+                </Link>
             );
         }
         else if (this.state.id === "star" || this.state.id === "socks" || this.state.id === "rocks" || this.state.id === "ornaments") {
